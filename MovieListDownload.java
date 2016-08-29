@@ -62,7 +62,8 @@ public class MovieListDownload extends AsyncTask<String,Void,MovieListDetails[]>
                 JSONObject details = results.getJSONObject(i);
                 String poster = details.getString("poster_path");
                 String iddetails = details.getString("id");
-                movies[i] = new MovieListDetails(poster,iddetails);
+                String title1 = details.getString("title");
+                movies[i] = new MovieListDetails(poster,iddetails,title1);
             }
             return movies;
         } catch (JSONException e) {

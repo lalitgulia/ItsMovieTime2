@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent();
                 i.setClass(MainActivity.this,SecondActivity.class);
                 i.putExtra("id",al.get(position).getId());
-
+                i.putExtra("title",al.get(position).getTitle());
                 startActivity(i);
             }
         });
